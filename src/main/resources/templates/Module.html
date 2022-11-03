@@ -1,0 +1,137 @@
+<!-- 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
+ <script src= "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" ></script>
+
+</head>
+<body>
+<div>
+	<h2 >Module Creation</h2>
+	<tr>
+	<div align = "left" >
+	<h3><a  th:href="@{'/addmodule'}">Add new</a>
+</div>
+	
+	</tr>
+
+	<div class="col-sm-8" align = "center">
+        <div class="panel-body" align = "center" >
+                 
+                 
+  	<table class="table">
+ 	<thead class="thead-dark">
+        <tr>
+      	    <th>Module ID</th>
+      	    <th>Module Code</th>
+            <th>Module Name</th>
+            <th>Lecturer in Charge</th>
+            <th>Gpa/Non-gpa</th>
+            <th>Credits</th>
+            <th>edit</th>
+            <th>Delete</th>
+            
+   	</tr>
+  </thead>
+ 
+ <tbody>
+      <tr  th:each="module : ${listmodule}">
+      <td th:text="${module.id}">Module ID</td>
+		<td th:text="${module.modulecode}">Module Code</td>
+		<td th:text="${module.modulename}">Module Name</td>
+		<td th:text="${module.lecturerincharge}">Module Lecturer in Charge</td>
+		<td th:text="${module.gpatype}">Gpa/Non-gpa</td>
+		<td th:text="${module.credits}">Module Credits</td>
+
+		<td>
+			<a th:href="@{'/edit/' + ${module.id}}">Edit</a>
+		</td>							    
+		<td>
+			<a th:href="@{'/delete/' + ${module.id}}">Delete</a>
+		</td>		    
+		</tr> 
+  </tbody>
+  </table>                 
+</div> 
+</div> 
+
+</tr>
+
+</tbody>
+
+<div>
+
+</body>
+</html>
+ -->
+ 
+ <!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Module</title>
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
+ <script src= "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" ></script>
+
+</head>
+<body style="background-image: url('https://i.postimg.cc/BQYPNHH9/bg-image-02.png'); background-size: cover;">
+	
+<div>
+	<h2 style="text-align:center; font-weight:bold; padding: 50px;">MODULE DETAILS</h2>
+
+
+	
+
+
+	<div class="col-sm-8"  style="margin-right:auto; margin-left:auto; padding:20px"  textalign = "center">
+        <div class="panel-body" texttextalign = "center" >
+                 
+                 
+  	<table class="table table-striped">
+ 	<thead>
+        <tr>
+      	    <th>Module Code</th>
+            <th>Module Name</th>
+			<th>Lecturer In-Charge</th>
+			<th>GPA/Non-GPA</th>
+			<th>Number of credits</th>
+            <th>Edit</th>
+            <th>Delete</th>
+   	</tr>
+  </thead>
+  <tbody>
+      <tr  th:each="module : ${listmodule}">
+		<td th:text="${module.modulecode}">Module Code</td>
+		<td th:text="${module.modulename}">Module Name</td>
+		<td th:text="${module.lecturerincharge}">Lecturer In-Charge</td>
+		<td th:text="${module.gpatype}">GPA/Non-GPA</td>
+		<td th:text="${module.credits}">Number of credits</td>
+
+		<td>
+			<a th:href="@{'/Module/edit/' + ${module.id}}">Edit</a>
+		</td>							    
+		<td>
+			<a th:href="@{'/Module/delete/' + ${module.id}}">Delete</a>
+		</td>		    
+		</tr> 
+  </tbody>
+  </table>    
+  <div textalign = "left" style="display: flex; justify-content:center">
+	<h3><a  th:href="@{'/Module/addmodule'}"><button type="button" class="btn btn-warning" style=" margin-top: 20px; border-radius: 50px; padding-left: 50px; padding-right: 50px;">Add New Module</button></a>	   
+</div>             
+</div>
+</div> 
+
+</tr>
+
+</tbody>
+</table>
+<!-- <div> -->
+
+</body>
+</html>
+ 
+ 

@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Add Course</title>
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
+    <script src= "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" ></script>
+</head>
+<body style="background-image: url('https://i.postimg.cc/BQYPNHH9/bg-image-02.png'); background-size: cover;">
+<div textalign="center">
+    <h1 style="text-align:center; font-weight:bold; padding: 50px;">CREATE NEW COURSE</h1>
+    <br />
+     <div class="col-sm-4" style="margin-right:auto; margin-left:auto; padding:20px">
+    <form action="#" th:action="@{/Module/save}" th:object="${module}" method="post">
+
+      
+ 	<div alight="left">
+            <tr>
+                <label class="form-label" >Module Code</label>
+                <td>
+	                <input type="hidden" th:field="*{id}" />
+	                <input type="text" th:field="*{modulecode}" class="form-control" placeholder="Module Code" style="border-radius: 5px;" />
+                </td>
+            </tr>
+         </div>   
+         
+         
+          <div alight="left">
+            <tr>
+                <label class="form-label" >Module Name</label>
+                
+                <td>
+                 <input type="text" th:field="*{modulename}" class="form-control" placeholder="Module Name" style="border-radius: 5px;"/>
+                </td>
+            </tr>
+         </div>  
+
+                  
+         <div alight="left">
+            <tr>
+                <label class="form-label" >Lecturer In-Charge</label>
+                
+                <td>
+                 <input type="text" th:field="*{lecturerincharge}" class="form-control" placeholder="Lecturer In-Charge" style="border-radius: 5px;"/>
+                </td>
+            </tr>
+         </div>  
+
+         <div alight="left">
+            <tr>
+                <label class="form-label" >GPA/Non-GPA</label>
+                
+                <td>
+                
+                 <select th:field="*{gpatype}" class="form-control" style="border-radius: 5px;">
+                    <option value="Non-GPA">Non-GPA</option>
+                    <option value="GPA">GPA</option>
+                              </select>
+   
+   
+        
+                </td>
+            </tr>
+         </div>  
+
+         <div alight="left">
+            <tr>
+                <label class="form-label" >Number of Credits</label>
+                
+                <td>
+                
+                 <select th:field="*{credits}" class="form-control" style="border-radius: 5px;">
+                    <option value="2">2</option>
+                    <option value="2.5">2.5</option>
+                     <option value="3">3</option>
+                      <option value="4">4</option>
+                              </select>
+   
+   
+        
+                </td>
+            </tr>
+            <tr>
+         </div>  
+              <div style="display:flex; justify-content: center;">
+        <td colspan="2"><button type="submit" class="btn btn-warning" style=" margin-top: 20px; border-radius: 50px; padding-left: 50px; padding-right: 50px;">Save</button> </td>
+        </div>
+        </tr>
+
+	<br>
+                <!-- <tr>
+                <td colspan="2"><button type="submit" class="btn btn-warning" style="float:right; margin:10px">Save</button> </td>
+                </tr> -->
+
+    </form>
+
+
+</div>
+</body>
+</html>
+

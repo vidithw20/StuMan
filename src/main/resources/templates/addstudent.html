@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Add Student</title>
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
+    <script src= "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" ></script>
+</head>
+<body style="background-image: url('https://i.postimg.cc/BQYPNHH9/bg-image-02.png'); background-size: cover;">
+<div textalign="center">
+    <h1 style="text-align:center; font-weight:bold; padding: 50px;">ADD NEW STUDENT</h1>
+    <br />
+     <div class="col-sm-4" style="margin-right:auto; margin-left:auto; padding:20px">
+    <form action="#" th:action="@{/Student/save}" th:object="${student}" method="post">
+
+      
+ 	<div alight="left">
+            <tr>
+                <label class="form-label" >Student Name</label>
+                <td>
+	                <input type="hidden" th:field="*{sid}" />
+	                <input type="text" th:field="*{sname}" class="form-control" placeholder="Student Name" style="border-radius: 5px;" />
+                </td>
+            </tr>
+         </div>   
+         
+         
+          <div alight="left">
+            <tr>
+                <label class="form-label" >Student Level</label>
+                
+                  <td>
+                
+                 <select th:field="*{slevel}" class="form-control" style="border-radius: 5px;">
+                    <option value="Level 1">Level 1</option>
+                    <option value="Level 2">Level 2</option>
+                     <option value="Level 3">Level 3</option>
+                      <option value="Level 4">Level 4</option>
+                              </select>
+   
+   
+        
+                </td>
+            </tr>
+         </div>  
+
+                  
+         <div alight="left">
+            <tr>
+                <label class="form-label" >Student PhoneNo</label>
+                
+                <td>
+                 <input type="text" th:field="*{snumber}" class="form-control" placeholder="Phone number" style="border-radius: 5px;"/>
+                </td>
+            </tr>
+         </div>  
+
+         <div alight="left">
+            <tr>
+                <label class="form-label" >Student Gmail</label>
+                
+                <td>
+                
+                 <td>
+                 <input type="text" th:field="*{sgmail}" class="form-control" placeholder="Gmail" style="border-radius: 5px;"/>
+                </td>
+   
+   
+        
+                </td>
+            </tr>
+         </div>  
+
+    
+              <div style="display:flex; justify-content: center;">
+        <td colspan="2"><button type="submit" class="btn btn-warning" style=" margin-top: 20px; border-radius: 50px; padding-left: 50px; padding-right: 50px;">Save</button> </td>
+        </div>
+        </tr>
+
+	<br>
+                <!-- <tr>
+                <td colspan="2"><button type="submit" class="btn btn-warning" style="float:right; margin:10px">Save</button> </td>
+                </tr> -->
+
+    </form>
+
+
+</div>
+</body>
+</html>
+
