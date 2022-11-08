@@ -18,7 +18,7 @@ public class Module {
 	private String modulename;
 	private String lecturerincharge;
 	private String gpatype;
-	private String credits;
+	private Double credits;
 	 
 	
 	public Module() {
@@ -26,7 +26,7 @@ public class Module {
 	
 	
 	public Module(Long id, String modulecode, String modulename, String lecturerincharge, String gpatype,
-			String credits) {
+			Double credits) {
 		this.id = id;
 		this.modulecode = modulecode;
 		this.modulename = modulename;
@@ -87,12 +87,12 @@ public class Module {
 	}
 
 
-	public String getCredits() {
+	public Double getCredits() {
 		return credits;
 	}
 
 
-	public void setCredits(String credits) {
+	public void setCredits(Double credits) {
 		this.credits = credits;
 	}
 
