@@ -16,7 +16,7 @@ public class Result {
 	@GeneratedValue(strategy= GenerationType.IDENTITY)
 	private Long rid;
 	private Long stdid;
-	private String rcourse;
+	private String rmodule;
 	private Double rmarks;
 	
 	
@@ -26,10 +26,10 @@ public class Result {
 	}
 	
 	
-	public Result(Long rid, Long stdid, String rcourse, Double rmarks) {
+	public Result(Long rid, Long stdid, String rmodule, Double rmarks) {
 		this.rid = rid;
 		this.stdid = stdid;
-		this.rcourse = rcourse;
+		this.rmodule = rmodule;
 		this.rmarks = rmarks;
 	}
 	public Long getRid() {
@@ -44,11 +44,11 @@ public class Result {
 	public void setStdid(Long stdid) {
 		this.stdid = stdid;
 	}
-	public String getRcourse() {
-		return rcourse;
+	public String getRmodule() {
+		return rmodule;
 	}
-	public void setRcourse(String rcourse) {
-		this.rcourse = rcourse;
+	public void setRmodule(String rmodule) {
+		this.rmodule = rmodule;
 	}
 	public Double getRmarks() {
 		return rmarks;
@@ -60,7 +60,7 @@ public class Result {
 
 	@Override
 	public String toString() {
-		return "Result [rid=" + rid + ", stdid=" + stdid + ", rcourse=" + rcourse + ", rmarks=" + rmarks + "]";
+		return "Result [rid=" + rid + ", stdid=" + stdid + ", rmodule=" + rmodule + ", rmarks=" + rmarks + "]";
 	}
 	
 	

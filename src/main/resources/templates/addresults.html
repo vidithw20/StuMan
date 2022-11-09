@@ -40,7 +40,7 @@
                 <label class="form-label" >Module Code</label>
                  <td>
                 
-                 <select th:field="*{rcourse}" class="form-control" style="border-radius: 5px;">
+                 <select th:field="*{rmodule}" class="form-control" style="border-radius: 5px;">
                     <option th:each="module : ${listmodule}"
                     th:value="${module.modulecode}"
                     th:text="${module.modulecode}">

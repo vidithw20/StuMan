@@ -14,6 +14,6 @@ import com.example.StuMan.Domain.AllResult;
 public interface AllResultRepository extends JpaRepository<AllResult, Long>{
 	
 	
-	@Query(value ="SELECT s.sid, s.sname, SUM(r.rmarks*m.credits)/(SUM(m.credits)) as sgpa FROM student s INNER JOIN result AS r ON r.stdid = s.sid LEFT JOIN module m ON m.modulecode = r.rcourse GROUP BY s.sid", nativeQuery=true)
+	@Query(value ="SELECT s.sid, s.sname, SUM(r.rmarks*m.credits)/(SUM(m.credits)) as sgpa FROM student s INNER JOIN result AS r ON r.stdid = s.sid LEFT JOIN module m ON m.modulecode = r.rmodule GROUP BY s.sid", nativeQuery=true)
 	List<Object[]>findAllResult();
 }
