@@ -15,6 +15,7 @@ The Springboot application that we developed is based on the “Educational Sect
 
 StuMan consists of .idea, .mvn, .settings, bin, src, resources and test folders. Under the StuMan folder, there are Controller, Domain, Repository and Service subfolders. Under the templates folder inside the resources folder, we have created our HTML pages.
 
+```bash
 
 +---java
 |   \---com
@@ -66,7 +67,8 @@ StuMan consists of .idea, .mvn, .settings, bin, src, resources and test folders.
         |       header.html
         |       
         \---images
-        
+
+```
 
 ## Team Members 
 
