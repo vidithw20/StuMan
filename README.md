@@ -15,57 +15,47 @@ The Springboot application that we developed is based on the “Educational Sect
 
 StuMan consists of .idea, .mvn, .settings, bin, src, resources and test folders. Under the StuMan folder, there are Controller, Domain, Repository and Service subfolders. Under the templates folder inside the resources folder, we have created our HTML pages.
 
-```bash
-
-+---java
-|   \---com
-|       \---example
-|           \---StuMan
-|               |   StuManApplication.java
-|               |   
-|               +---Controller
-|               |       AllResultController.java
-|               |       IndexController.java
-|               |       ModuleController.java
-|               |       ResultController.java
-|               |       StudentController.java
-|               |       
-|               +---Domain
-|               |       AllResult.java
-|               |       Module.java
-|               |       Result.java
-|               |       Student.java
-|               |       
-|               +---Repository
-|               |       AllResultRepository.java
-|               |       ModuleRepository.java
-|               |       ResultRepository.java
-|               |       StudentRepository.java
-|               |       
-|               \---Service
-|                       AllResultService.java
-|                       ModuleService.java
-|                       ResultService.java
-|                       StudentService.java
-|                       
-\---resources
-    |   application.properties
-    |   
-    +---static
-    \---templates
-        |   addmodule.html
-        |   addresults.html
-        |   addstudent.html
-        |   AllResult.html
-        |   index.html
-        |   Module.html
-        |   Student.html
-        |   
-        +---comman
-        |       header.html
-        |       
-        \---images
-
+```
+├── java
+│   └── com
+│       └── example
+│           └── StuMan
+│               ├── Controller
+│               │   ├── AllResultController.java
+│               │   ├── IndexController.java
+│               │   ├── ModuleController.java
+│               │   ├── ResultController.java
+│               │   └── StudentController.java
+│               ├── Domain
+│               │   ├── AllResult.java
+│               │   ├── Module.java
+│               │   ├── Result.java
+│               │   └── Student.java
+│               ├── Repository
+│               │   ├── AllResultRepository.java
+│               │   ├── ModuleRepository.java
+│               │   ├── ResultRepository.java
+│               │   └── StudentRepository.java
+│               ├── Service
+│               │   ├── AllResultService.java
+│               │   ├── ModuleService.java
+│               │   ├── ResultService.java
+│               │   └── StudentService.java
+│               └── StuManApplication.java
+└── resources
+    ├── static
+    ├── templates
+    │   ├── comman
+    │   │   └── header.html
+    │   ├── images
+    │   ├── addmodule.html
+    │   ├── addresults.html
+    │   ├── addstudent.html
+    │   ├── AllResult.html
+    │   ├── index.html
+    │   ├── Module.html
+    │   └── Student.html
+    └── application.properties
 ```
 
 ## Team Members 
