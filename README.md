@@ -9,10 +9,64 @@ The Springboot application that we developed is based on the “Educational Sect
 - Course Page
 - Student Redistration Form 
 - Course Registration Form
+- Student Result Page
 
 ## Files and Folders
 
 StuMan consists of .idea, .mvn, .settings, bin, src, resources and test folders. Under the StuMan folder, there are Controller, Domain, Repository and Service subfolders. Under the templates folder inside the resources folder, we have created our HTML pages.
+
+
++---java
+|   \---com
+|       \---example
+|           \---StuMan
+|               |   StuManApplication.java
+|               |   
+|               +---Controller
+|               |       AllResultController.java
+|               |       IndexController.java
+|               |       ModuleController.java
+|               |       ResultController.java
+|               |       StudentController.java
+|               |       
+|               +---Domain
+|               |       AllResult.java
+|               |       Module.java
+|               |       Result.java
+|               |       Student.java
+|               |       
+|               +---Repository
+|               |       AllResultRepository.java
+|               |       ModuleRepository.java
+|               |       ResultRepository.java
+|               |       StudentRepository.java
+|               |       
+|               \---Service
+|                       AllResultService.java
+|                       ModuleService.java
+|                       ResultService.java
+|                       StudentService.java
+|                       
+\---resources
+    |   application.properties
+    |   
+    +---static
+    \---templates
+        |   addmodule.html
+        |   addresults.html
+        |   addstudent.html
+        |   AllResult.html
+        |   bg_image01.svg
+        |   bg_image02.svg
+        |   index.html
+        |   Module.html
+        |   Student.html
+        |   
+        +---comman
+        |       header.html
+        |       
+        \---images
+        
 
 ## Team Members 
 
