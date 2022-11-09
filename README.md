@@ -57,8 +57,6 @@ StuMan consists of .idea, .mvn, .settings, bin, src, resources and test folders.
         |   addresults.html
         |   addstudent.html
         |   AllResult.html
-        |   bg_image01.svg
-        |   bg_image02.svg
         |   index.html
         |   Module.html
         |   Student.html
