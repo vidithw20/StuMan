@@ -1,0 +1,72 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Student Results</title>
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
+ <script src= "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" ></script>
+
+
+
+<script>
+function Function(m) {
+	
+	if (m=="4.0"){
+		
+		return "A+"
+	}
+	else return "B"
+  
+}
+</script>
+</head>
+
+
+
+<body style="background-image: url('https://i.postimg.cc/BQYPNHH9/bg-image-02.png'); background-size: cover;">
+	
+<div>
+	<h2 style="text-align:center; font-weight:bold; padding: 50px;">Student Result DETAILS</h2>
+
+
+	
+
+
+	<div class="col-sm-8"  style="margin-right:auto; margin-left:auto; padding:20px"  textalign = "center">
+        <div class="panel-body" texttextalign = "center" >
+                 
+                 
+  	<table class="table table-striped">
+ 	<thead>
+        <tr>
+      	    <th>Student ID</th>
+			<th>Module Code</th>
+			<th>Marks</th>
+            <th>Delete</th>
+   	</tr>
+  </thead>
+ <tbody>
+      <tr  th:each="result : ${listresult}">
+      <td th:text="${result.stdid}">Student ID</td>
+		<td th:text="${result.rmodule}">Module Code</td>
+		 <td th:text="${result.rmarks}">Marks</td>
+							    
+		<td>
+			<a th:href="@{'/Result/delete/' + ${result.rid}}">Delete</a>
+		</td>		    
+	</tr> 
+  </tbody>
+  </table>  
+               
+</div>
+</div> 
+
+</tr>
+
+</tbody>
+</table>
+<!-- <div> -->
+
+
+</body>
+</html>

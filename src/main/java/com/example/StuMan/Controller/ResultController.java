@@ -22,7 +22,7 @@ import com.example.StuMan.Service.StudentService;
 
 
 @Controller
-@RequestMapping("/result")
+@RequestMapping("/Result")
 public class ResultController {
 
 	
@@ -51,6 +51,18 @@ public class ResultController {
 	        model.addAttribute("result", new Result());
 	        return "addresults";
 	    }
+	    
+	    
+		@RequestMapping(value ="/studentresult", method = RequestMethod.GET)
+		
+		public String viewStudentResultPage(Model model)
+		{
+			List<Result> listresult = service.listAll();
+			model.addAttribute("listresult", listresult);
+			return "result";
+			
+			
+		}
 	 
 	    @RequestMapping(value = "/save", method = RequestMethod.POST)
 	    public String saveResult(@ModelAttribute("result") 	Result result) {
@@ -58,17 +70,18 @@ public class ResultController {
 	        return "redirect:/result";
 	    }
 	 
-	    @RequestMapping("/edit/{rid}")
-	    public ModelAndView showEditResultPage(@PathVariable(name = "rid") int rid) {
-	        ModelAndView mav = new ModelAndView("addresults"); 
-	        Result result = service.get(rid);
-	        mav.addObject("result", result);
-	        return mav;
-	        
-	    }
+//	    @RequestMapping("/edit/{rid}")
+//	    public ModelAndView showEditResultPage(@PathVariable(name = "rid") int rid) {
+//	    	
+//	        ModelAndView mav = new ModelAndView("addresults"); 
+//	        Result result = service.get(rid);
+//	        mav.addObject("result", result);
+//	        return mav;
+//	        
+//	    }
 	    @RequestMapping("/delete/{rid}")
 	    public String deleteResultPage(@PathVariable(name = "rid") int rid) {
 	        service.delete(rid);
-	        return "redirect:/student";
+	        return "redirect:/result";
 	    }
 }
